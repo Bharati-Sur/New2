@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   B ♥ S
+  </title>
+  <link href="images/thumb.png" rel="icon" type="image/icon type"/>
+  <!-- Viewport Meta Tag for Responsive Design -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- Open Graph Meta Tags -->
+  <meta content="Bharathi ♥ Surya - Wedding Invitation" property="og:title"/>
+  <meta content="Join Bharathi and Surya on their special day to celebrate their wedding with joy, love, and blessings." property="og:description"/>
+  <meta content="images/photo4.jpg" property="og:image"/>
+  <meta content="https://ramc26.github.io/BwedsS/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <!-- Noto Sans Telugu & Anek Telugu -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&amp;family=Anek+Telugu:wght@100..800&amp;display=swap" rel="stylesheet"/>
+  <!-- Playfair Display & Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&amp;display=swap" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet"/>
+  <!-- Add Calendar Event -->
+  <script async="" defer="" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" type="text/javascript">
+  </script>
+  <script async="" defer="" src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2">
+  </script>
+  <!-- Google Tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QRDPHYW8W0">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QRDPHYW8W0');
+  </script>
+  <!-- Lottie Files -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js">
+  </script>
+ </head>
+ <body>
+  <!-- Modal Pop-up for Welcome -->
+  <div aria-hidden="true" class="modal fade" id="welcomeModal" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered book-open">
+    <div class="modal-content text-center bg-dark text-white" style="border-radius: 15px;">
+     <div class="modal-header border-0">
+      <h5 class="modal-title w-100">
+       Namaskaram!
+      </h5>
+      <br/>
+     </div>
+     <center>
+      <img alt="modalpng" class="modal-img" src="images/modal.png"/>
+     </center>
+     <div class="modal-body">
+      <p class="modal-greeting">
+       Step into this joyful union of love and blessings—come celebrate with us in warmth, laughter, and divine grace 💖✨
+      </p>
+      <button class="btn btn-warning mt-3" id="startInvitation">
+       Open Invitation
+      </button>
+      <br/>
+      <br/>
+      <p style="font-size: x-small; color: brown;">
+       **This page plays Audio. Use the Mute button at the bottom-right
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Floating Translate Button -->
+  <a aria-label="Translate to Telugu" class="translate-button ripple-effect" href="https://ramc26-github-io.translate.goog/BwedsS/?_x_tr_sl=en&amp;_x_tr_tl=te" target="_blank">
+   <i class="bi bi-translate">
+   </i>
+  </a>
+  <div class="translate-extension">
+   తెలుగు లో
+  </div>
+  <!-- Background Audio -->
+  <audio id="my_audio" loop="" src="images/audio.mp3">
+  </audio>
+  <!-- Mute/Unmute Button (Hidden initially) -->
+  <button aria-label="Mute/Unmute Audio" class="mute-toggle-button d-none" id="mute-toggle-button">
+   <i class="bi bi-volume-up-fill">
+   </i>
+  </button>
+  <!-- 1. Welcome Section -->
+  <section class="vh-100 d-flex flex-column text-white text-center position-relative" id="welcome">
+   <div class="overlay position-absolute w-100 h-100">
+   </div>
+   <div class="container position-relative d-flex flex-column justify-content-between h-100">
+    <div class="top-items mb-4">
+     <div class="row justify-content-center align-items-center">
+      <div class="col-4 text-center">
+       <span class="top-text">
+        శ్రీరస్తు
+       </span>
+      </div>
+      <div class="col-4 text-center">
+       <img alt="Siva Parvathi" class="img-fluid top-image" src="images/ShivaParvathi.webp"/>
+      </div>
+      <div class="col-4 text-center">
+       <span class="top-text">
+        శుభమస్తు
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="top-content">
+     <p class="sloka">
+     </p>
+    </div>
+    <div class="middle-content">
+     <h1 class="display-4 fw-bold BGNames">
+      Bharathi &amp; Surya's
+     </h1>
+     <p class="lead">
+      Wedding Invitation
+     </p>
+     <div class="mt-3">
+      <p class="fs-4 mb-2">
+       Sumuhurtham:
+      </p>
+      <div class="timer-box d-inline-block">
+       <p class="timer-text" id="timer">
+       </p>
+      </div>
+      <center>
+       <add-to-calendar-button buttonslist="" buttonstyle="neumorphism" description="Join Ganga Anusha and Gangaram on their auspicious wedding day." enddate="2025-02-21" endtime="07:00" hidebackground="" hidecheckmark="" hidetextlabelbutton="" hidetextlabellist="" label="Save The Date !!" lightmode="bodyScheme" location="Kalyana Mandapam, Mallam, Pithapuram Mandalam" name="Ganga Anusha ♥ Gangaram" options="'Apple','Google','iCal','Outlook.com','Yahoo'" pastdatehandling="disable" size="4" startdate="2025-02-20" starttime="19:00" timezone="Asia/Calcutta">
+       </add-to-calendar-button>
+      </center>
+     </div>
+    </div>
+    <div class="bottom-content">
+     <img alt="Kalyanam" class="img-fluid kalyanam rounded shadow" src="images/Kalyanam.jpg"/>
+    </div>
+   </div>
+  </section>
+  <!-- 2. Who & Who Section -->
+  <section class="py-5" id="who">
+   <div class="container text-center">
+    <h2 class="fw-bold mb-4">
+     Bride &amp; Groom
+    </h2>
+    <div class="row align-items-center">
+     <div class="col-12 col-md-5 mb-4 mb-md-0">
+      <div class="profile-img mx-auto">
+       <img alt="Groom" class="img-fluid" src="images/groom.jpg"/>
+      </div>
+      <h2 class="mt-3">
+       Chi. Gangaram
+      </h2>
+      <span class="education d-block mb-2">
+       B.Tech in Mech
+      </span>
+      <p class="mb-0">
+       S/o Sri. Suribabu Bathina &amp; Srmt. Lakshmi Devi Bathina
+      </p>
+     </div>
+     <div class="col-12 col-md-2 text-center d-flex align-items-center justify-content-center">
+      <div class="separator d-none d-md-block">
+       <span>
+        |
+       </span>
+      </div>
+      <hr class="d-block d-md-none w-50 mx-auto"/>
+     </div>
+     <div class="col-12 col-md-5">
+      <div class="profile-img mx-auto">
+       <img alt="Bride" class="img-fluid" src="images/bride.jpg"/>
+      </div>
+      <h2 class="mt-3">
+       Chi.La.Sow. Ganga Anusha
+      </h2>
+      <span class="education d-block mb-2">
+       M.Sc in Maths
+      </span>
+      <p class="mb-0">
+       D/o Sri. Suryudu Mallireddy &amp; Srmt. Veeralakshmi Mallireddy
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Divider -->
+  <div class="divider">
+   <img alt="Divider" class="img-fluid mx-auto d-block" src="images/divider-1.png"/>
+  </div>
+  <!-- 3. Where & When Section -->
+  <section class="py-5" id="venue">
+   <div class="container text-center">
+    <h2 class="fw-bold mb-4">
+     Where &amp; When
+    </h2>
+    <div class="row align-items-center">
+     <div class="col-12 col-md-6 mb-4">
+      <h3>
+       1. Lunch
+      </h3>
+      <p>
+       <strong>
+        Date &amp; Time:
+       </strong>
+       Wednesday, 04 June 2025, 12 PM onwards
+      </p>
+      <p>
+       <strong>
+        Venue:
+       </strong>
+       Groom’s Home, Julluru, Pithapuram Mandalam
+      </p>
+      <iframe allowfullscreen="" class="w-100 rounded" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.app.goo.gl/vNZBC4JoCarmF4qJ6?g_st=aw" style="border:0;">
+      </iframe>
+     </div>
+     <div class="col-12 col-md-6 mb-4">
+      <h3>
+       2. Reception followed by Marriage
+      </h3>
+      <p>
+       <strong>
+        Reception:
+       </strong>
+       Wednesday, 04 June 2025, 7 PM onwards
+      </p>
+      <p>
+       <strong>
+        Marriage:
+       </strong>
+       Thursday, 05 June 2025, 3:38 AM
+      </p>
+      <p>
+       <strong>
+        Venue:
+       </strong>
+       Kalyana Mandapam, Mallam, Pithapuram Mandalam
+      </p>
+      <iframe allowfullscreen="" class="w-100 rounded" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.app.goo.gl/MwXGQbNcRWQ1J8gy9?g_st=ac" style="border:0;">
+      </iframe>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Divider -->
+  <!-- 4. Gallery Section -->
+  <!-- Divider -->
+  <!-- 5. Invitation Section -->
+  <div class="divider my-4">
+   <img alt="divider" class="img-fluid" src="images/divider-1.png" style="max-width: 150px;"/>
+  </div>
+  <section class="py-5" id="invite">
+   <div class="container">
+    <h2 class="text-center fw-bold mb-4">
+     Invitation from Our Families
+    </h2>
+    <div class="row align-items-center text-center">
+     <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <div class="profile-img mx-auto">
+       <img alt="Groom's Parents" class="img-fluid rounded" src="images/groom_parents.jpg"/>
+      </div>
+      <h2 class="mt-3">
+       Sri. Suribabu Bathina and Srmt. Lakshmi Devi Bathina
+      </h2>
+      <p class="mb-0">
+       We invite you to join us in celebrating this joyous occasion.
+      </p>
+     </div>
+     <div class="col-12 col-md-6">
+      <div class="profile-img mx-auto">
+       <img alt="Bride's Parents" class="img-fluid rounded" src="images/bride_parents.jpg"/>
+      </div>
+      <h2 class="mt-3">
+       Sri. Suryudu Mallireddy and Srmt. Veeralakshmi Mallireddy
+      </h2>
+      <p class="mb-0">
+       We look forward to sharing this special day with you.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Divider -->
+  <!-- 6. Contact Section -->
+  <div class="divider my-4">
+   <img alt="divider" class="img-fluid" src="images/divider-1.png" style="max-width: 150px;"/>
+  </div>
+  <section class="py-5" id="contact">
+   <div class="container">
+    <h2 class="text-center fw-bold mb-4">
+     Contact Us
+    </h2>
+    <div class="row text-center">
+     <div class="col-12 col-md-3 mb-3 mb-md-0">
+      <p>
+       <i class="bi bi-person-circle me-2">
+       </i>
+       Bride's Brother: +91 73868 57851
+      </p>
+     </div>
+     <div class="col-12 col-md-3 mb-3 mb-md-0">
+      <p>
+       <i class="bi bi-person-circle me-2">
+       </i>
+       Bride's Father: +91 97012 97990
+      </p>
+     </div>
+     <div class="col-12 col-md-3 mb-3 mb-md-0">
+      <p>
+       <i class="bi bi-person-circle me-2">
+       </i>
+       Groom: +91 99489 77046
+      </p>
+     </div>
+     <div class="col-12 col-md-3">
+      <p>
+       <i class="bi bi-person-circle me-2">
+       </i>
+       Groom's Father: +91 81858 20825
+      </p>
+     </div>
+    </div>
+    <div class="text-center mt-4">
+     <a class="neomorphic-btn" href="https://wa.me/9948977046" target="_blank">
+      <i class="bi bi-whatsapp me-2">
+      </i>
+      Message Me
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Footer Section -->
+  <footer class="footer text-center py-4">
+   <div class="container">
+    <p>
+     Brought to you with care by Gangaram. Your presence is our joy! 💖✨
+    </p>
+    <p class="mb-0">
+     © 2025 All rights reserved by Gangaram and Anusha.
+    </p>
+   </div>
+  </footer>
+  <!-- JS Scripts -->
+  <!-- jQuery first -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+  </script>
+  <!-- Then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+  </script>
+  <!-- Custom JS -->
+  <script src="script.js">
+  </script>
+ </body>
+</html>
